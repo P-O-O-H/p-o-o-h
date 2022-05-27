@@ -1,0 +1,44 @@
+---
+# OpenSSH service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: openssh
+  namespace: pots
+  labels:
+    app: openssh
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 22
+      #nodePort: 30022
+  selector:
+    app: openssh
+
+---
+# OpenSSH application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openssh
+  namespace: pots
+  labels:
+    app: openssh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openssh
+  template:
+    metadata:
+      labels:
+        app: openssh
+    spec:
+      containers:
+        - name: openssh
+          image: kappldw/ssh_server:latest
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m
