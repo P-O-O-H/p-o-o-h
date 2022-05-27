@@ -44,4 +44,8 @@
 
 ### Installing honeypot deployment system
 
-next commit...
+Installing the management environment is very simple. Once you have configured your values for deployment (a sample is given [here](./values.yaml.sample)), choose an installment name and run the following:
+
+	`$ helm install HELM_INSTALL_NAME .`
+
+This will deploy the honeypot management network. Use the commands provided after execution to locate the external address where services can be accessed.
