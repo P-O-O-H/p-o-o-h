@@ -1,0 +1,23 @@
+# elasticsearchNodeCount specifies the number of nodes in the Elastic Search cluster. Must be greater than 0.
+elasticsearchNodeCount: 4
+
+# elasticsearchImage specifies the Elastic Search image to use. https://hub.docker.com/_/elasticsearch
+elasticsearchImage: docker.elastic.co/elasticsearch/elasticsearch:7.16.1
+
+# fluentdImage specifies the FluentD image to use. https://github.com/fluent/fluentd-kubernetes-daemonset
+fluentdImage: fluent/fluentd-kubernetes-daemonset:v1.14.3-debian-elasticsearch7-1.0
+
+# kibanaNodePort is the port used to expose Kibana externally.
+kibanaNodePort: 30561
+
+# kibanaReplicaCount specifies the number of Kibana pods to run. Must be greater than 0.
+kibanaReplicaCount: 1
+
+# kibanaImage specifies the Kibana image to use. https://hub.docker.com/_/kibana
+kibanaImage: docker.elastic.co/kibana/kibana:7.16.1
+
+# managementNamespace specifies what namespace to use for all management pods.
+managementNamespace: management
+
+# honeypotNamespace specifies what namespace to use for all honeypots.
+honeypotNamespace: pots

@@ -1,0 +1,49 @@
+---
+# Kibana service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+  namespace: {{ .Values.managementNamespace }}
+  labels:
+    app: kibana
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5601
+    nodePort: {{ .Values.kibanaNodePort }}
+  selector:
+    app: kibana
+
+---
+# Kibana application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kibana
+  namespace: {{ .Values.managementNamespace }}
+  labels:
+    app: kibana
+spec:
+  replicas: {{ .Values.kibanaReplicaCount }}
+  selector:
+    matchLabels:
+      app: kibana
+  template:
+    metadata:
+      labels:
+        app: kibana
+    spec:
+      containers:
+      - name: kibana
+        image: {{ .Values.kibanaImage }}
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 100m
+        env:
+        - name: ELASTICSEARCH_URL
+          value: http://10.8.1.1:9200
+        ports:
+        - containerPort: 5601
