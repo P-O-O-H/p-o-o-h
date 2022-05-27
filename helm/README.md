@@ -1,14 +1,14 @@
 # Honeypot Deployment Documentation
 
 ### Prerequisite tools:
-- GCloud CLI
-- KubeCTL
-- Helm
+- [GCloud CLI](https://cloud.google.com/sdk/docs/install)
+- [KubeCTL](https://kubernetes.io/docs/tasks/tools/#kubectl)
+- [Helm](https://helm.sh/docs/intro/install/)
 
 
 ### Preparing the cluster
 
-1. Visit GCP (https://console.cloud.google.com). If available, activate your free $300 in GCP credits to deploy the project. Further credits can be purchased in the future to maintain the cluster.
+1. Visit [GCP](https://console.cloud.google.com). If available, activate your free $300 in GCP credits to deploy the project. Further credits can be purchased in the future to maintain the cluster.
 
 2. Enable the Kubernetes Engine API in the navigation menu.
 
