@@ -1,0 +1,31 @@
+<button type="button" id="delete-pot-button"><i class="fas fa-trash"></i></button>
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="delete-pot-modal" class="hidden">
+  <div class="modal-dialog">
+
+    <div class="modal-header">
+      <h3>Delete a Pot</h3>
+      <button type="button" class="modal-close-button">&times;</button>
+    </div>
+
+    <form class="" action="/delpot" method="POST">
+
+      <div class="modal-body">
+        <div class="pot-input-element">
+          <label for="pot_host_delete_input">Hostname</label>
+          <input type="text" name="pot_host_delete_input"></input>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="modal-cancel-button">Cancel</button>
+        <button type="submit" class="modal-accept-button" value="Submit">Delete Pot</button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>

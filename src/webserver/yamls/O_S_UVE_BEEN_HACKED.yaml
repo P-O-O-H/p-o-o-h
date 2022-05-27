@@ -1,0 +1,43 @@
+---
+# HONEYPOT_NAME service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: O_S_UVE_BEEN_HACKED
+  namespace: pots
+  labels:
+    app: O_S_UVE_BEEN_HACKED
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 34662
+  selector:
+    app: O_S_UVE_BEEN_HACKED
+
+---
+# HONEYPOT_NAME application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: O_S_UVE_BEEN_HACKED
+  namespace: pots
+  labels:
+    app: O_S_UVE_BEEN_HACKED
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: O_S_UVE_BEEN_HACKED
+  template:
+    metadata:
+      labels:
+        app: O_S_UVE_BEEN_HACKED
+    spec:
+      containers:
+        - name: O_S_UVE_BEEN_HACKED
+          image: sailreddex/Pooh:latest
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

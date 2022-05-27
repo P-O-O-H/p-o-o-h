@@ -1,0 +1,43 @@
+---
+# HONEYPOT_NAME service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: SUSPICIOUS_SINGLE
+  namespace: pots
+  labels:
+    app: SUSPICIOUS_SINGLE
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 73612
+  selector:
+    app: SUSPICIOUS_SINGLE
+
+---
+# HONEYPOT_NAME application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SUSPICIOUS_SINGLE
+  namespace: pots
+  labels:
+    app: SUSPICIOUS_SINGLE
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SUSPICIOUS_SINGLE
+  template:
+    metadata:
+      labels:
+        app: SUSPICIOUS_SINGLE
+    spec:
+      containers:
+        - name: SUSPICIOUS_SINGLE
+          image: kappldw/sso:v2
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

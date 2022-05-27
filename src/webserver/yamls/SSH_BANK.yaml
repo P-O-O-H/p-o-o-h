@@ -1,0 +1,43 @@
+---
+# HONEYPOT_NAME service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: SSH_BANK
+  namespace: pots
+  labels:
+    app: SSH_BANK
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 54116
+  selector:
+    app: SSH_BANK
+
+---
+# HONEYPOT_NAME application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SSH_BANK
+  namespace: pots
+  labels:
+    app: SSH_BANK
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SSH_BANK
+  template:
+    metadata:
+      labels:
+        app: SSH_BANK
+    spec:
+      containers:
+        - name: SSH_BANK
+          image: kappldw/ssh_server:latest
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

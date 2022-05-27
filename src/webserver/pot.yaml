@@ -1,0 +1,43 @@
+---
+# HONEYPOT_NAME service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: SUPER POT NAME
+  namespace: pots
+  labels:
+    app: SUPER POT NAME
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 1234
+  selector:
+    app: SUPER POT NAME
+
+---
+# HONEYPOT_NAME application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SUPER POT NAME
+  namespace: pots
+  labels:
+    app: SUPER POT NAME
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SUPER POT NAME
+  template:
+    metadata:
+      labels:
+        app: SUPER POT NAME
+    spec:
+      containers:
+        - name: SUPER POT NAME
+          image: image of pot
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

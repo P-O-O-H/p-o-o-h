@@ -1,0 +1,43 @@
+---
+# HONEYPOT_NAME service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: SHHHH_IM_REAL
+  namespace: pots
+  labels:
+    app: SHHHH_IM_REAL
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 61392
+  selector:
+    app: SHHHH_IM_REAL
+
+---
+# HONEYPOT_NAME application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SHHHH_IM_REAL
+  namespace: pots
+  labels:
+    app: SHHHH_IM_REAL
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SHHHH_IM_REAL
+  template:
+    metadata:
+      labels:
+        app: SHHHH_IM_REAL
+    spec:
+      containers:
+        - name: SHHHH_IM_REAL
+          image: kappldw/ssh_server:latest
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

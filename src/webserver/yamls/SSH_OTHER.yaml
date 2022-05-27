@@ -1,0 +1,43 @@
+---
+# HONEYPOT_NAME service definition.
+apiVersion: v1
+kind: Service
+metadata:
+  name: SSH_OTHER
+  namespace: pots
+  labels:
+    app: SSH_OTHER
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 12441
+  selector:
+    app: SSH_OTHER
+
+---
+# HONEYPOT_NAME application definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SSH_OTHER
+  namespace: pots
+  labels:
+    app: SSH_OTHER
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SSH_OTHER
+  template:
+    metadata:
+      labels:
+        app: SSH_OTHER
+    spec:
+      containers:
+        - name: SSH_OTHER
+          image: kappldw/ssh_server:latest
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

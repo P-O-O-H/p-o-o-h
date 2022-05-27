@@ -1,0 +1,43 @@
+<button type="button" id="create-pot-button"><i class="fas fa-plus"></i></button>
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="create-pot-modal" class="hidden">
+  <div class="modal-dialog">
+
+    <div class="modal-header">
+      <h3>Create a Pot</h3>
+      <button type="button" class="modal-close-button">&times;</button>
+    </div>
+
+    <form class="" action="/addpot" method="POST">
+
+      <div class="modal-body">
+        <div class="pot-input-element">
+          <label for="pot_host_input">Hostname</label>
+          <input type="text" name="pot_host_input"></input>
+        </div>
+        <div class="pot-input-element">
+          <label for="pot_port_input">Port</label>
+          <input type="text" name="pot_port_input">
+        </div>
+        <div class="pot-input-element">
+          <label for="pot_img_input">Pot Image</label>
+          <select name="pot_img_input">
+            <option value="kappldw/ssh_server:latest" selected>SSH Server</option>
+            <option value="sailreddex/Pooh:latest">OSU Webserver</option>
+            <option value="kappldw/sso:v2">Single Sign On</option>
+
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="modal-cancel-button">Cancel</button>
+        <button type="submit" class="modal-accept-button" value="Submit">Create Pot</button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
