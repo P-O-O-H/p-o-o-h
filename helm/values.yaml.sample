@@ -1,12 +1,12 @@
 # elasticsearchNodeCount specifies the number of nodes in the Elastic Search cluster. Must be greater than 0.
-elasticsearchNodeCount: 4
+elasticsearchNodeCount: 3
 
 # elasticsearchImage specifies the Elastic Search image to use. https://hub.docker.com/_/elasticsearch
-elasticsearchImage: docker.elastic.co/elasticsearch/elasticsearch:8.2.2@sha256:0101bbe4f8e9deeb01768955c7007d0a2927c3ea320fa6fb1f87ef04992caf9d
+elasticsearchImage: docker.elastic.co/elasticsearch/elasticsearch:7.17.4@sha256:b3fed35f7a43a3e16aa037bf9c8cb8139d1eec879ab5616f3c20746484de4010
 
 
 # fluentdImage specifies the FluentD image to use. https://github.com/fluent/fluentd-kubernetes-daemonset
-fluentdImage: fluent/fluentd-kubernetes-daemonset:v1.14.3-debian-elasticsearch7-1.0
+fluentdImage: fluent/fluentd-kubernetes-daemonset:v1.14.6-debian-elasticsearch7-1.0
 
 
 # kibanaNodePort is the port used to expose Kibana externally.
@@ -16,7 +16,7 @@ kibanaNodePort: 30561
 kibanaReplicaCount: 1
 
 # kibanaImage specifies the Kibana image to use. https://hub.docker.com/_/kibana
-kibanaImage: docker.elastic.co/kibana/kibana:8.2.2@sha256:f024c0d47b7a207aacb342c5638a0b79011e8dd988e112f059a306e8f6c765f7
+kibanaImage: docker.elastic.co/kibana/kibana:7.17.4@sha256:ddd263a6fa663e514fcfa5b0eae6065dbfcf7c3e62fc646621899ef3b47f7870
 
 
 # webserverImage specifies the image to use for the honeypot webserver
