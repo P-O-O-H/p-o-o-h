@@ -1,0 +1,80 @@
+---
+# webserver service account
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    iam.gke.io/gcp-service-account: {{ .Values.webserverGcpSvcAcct }}
+  name: webserver
+  namespace: {{ .Values.managementNamespace }}
+  labels:
+    app: webserver
+
+---
+# webserver authorization role definition.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: webserver
+  labels:
+    app: webserver
+rules:
+  - apiGroups:
+      - ""
+      - apps
+    resources:
+      - pods
+      - services
+      - namespaces
+      - deployments
+      - apps
+    verbs:
+      - get
+      - create
+      - delete
+
+---
+# Binding authorization role to the webserver service account.
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: webserver
+roleRef:
+  kind: ClusterRole
+  name: webserver
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+  - kind: ServiceAccount
+    name: webserver
+    namespace: {{ .Values.managementNamespace }}
+
+---
+# webserver deployment definition.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver
+  namespace: {{ .Values.managementNamespace }}
+  labels:
+    app: webserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      serviceAccount: webserver
+      serviceAccountName: webserver
+      containers:
+        - name: webserver
+          image: {{ .Values.webserverImage }}
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 1000m
+            requests:
+              cpu: 100m

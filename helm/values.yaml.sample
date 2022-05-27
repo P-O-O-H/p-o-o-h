@@ -2,10 +2,12 @@
 elasticsearchNodeCount: 4
 
 # elasticsearchImage specifies the Elastic Search image to use. https://hub.docker.com/_/elasticsearch
-elasticsearchImage: docker.elastic.co/elasticsearch/elasticsearch:7.16.1
+elasticsearchImage: docker.elastic.co/elasticsearch/elasticsearch:8.2.2@sha256:0101bbe4f8e9deeb01768955c7007d0a2927c3ea320fa6fb1f87ef04992caf9d
+
 
 # fluentdImage specifies the FluentD image to use. https://github.com/fluent/fluentd-kubernetes-daemonset
 fluentdImage: fluent/fluentd-kubernetes-daemonset:v1.14.3-debian-elasticsearch7-1.0
+
 
 # kibanaNodePort is the port used to expose Kibana externally.
 kibanaNodePort: 30561
@@ -14,7 +16,15 @@ kibanaNodePort: 30561
 kibanaReplicaCount: 1
 
 # kibanaImage specifies the Kibana image to use. https://hub.docker.com/_/kibana
-kibanaImage: docker.elastic.co/kibana/kibana:7.16.1
+kibanaImage: docker.elastic.co/kibana/kibana:8.2.2@sha256:f024c0d47b7a207aacb342c5638a0b79011e8dd988e112f059a306e8f6c765f7
+
+
+# webserverImage specifies the image to use for the honeypot webserver
+webserverImage:
+
+# webserverGcpSvcAcct specifies the GCP service account that is to be bound to the service account used by the webserver
+webserverGcpSvcAcct:
+
 
 # managementNamespace specifies what namespace to use for all management pods.
 managementNamespace: management
