@@ -1,1 +1,3 @@
 helm/values.yaml
+src/webserver/node_modules
+src/deploy-honeypot/deploy
