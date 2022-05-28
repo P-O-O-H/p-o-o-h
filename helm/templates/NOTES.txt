@@ -1,1 +1,10 @@
 Perceiving outsider operations with honeypots beginning...
+
+Deploy logs from the management console:
+	
+	$ kubectl get svc webserver -n {{ .Values.managementNamespace }}
+
+
+Logs can be accessed through Kibana:
+
+	$ kubectl get svc kibana -n {{ .Values.managementNamespace }}
