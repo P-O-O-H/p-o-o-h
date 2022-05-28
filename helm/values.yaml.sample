@@ -1,5 +1,5 @@
 # elasticsearchNodeCount specifies the number of nodes in the Elastic Search cluster. Must be greater than 0.
-elasticsearchNodeCount: 3
+elasticsearchNodeCount: 1
 
 # elasticsearchImage specifies the Elastic Search image to use. https://hub.docker.com/_/elasticsearch
 elasticsearchImage: docker.elastic.co/elasticsearch/elasticsearch:7.17.4@sha256:b3fed35f7a43a3e16aa037bf9c8cb8139d1eec879ab5616f3c20746484de4010

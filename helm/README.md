@@ -45,13 +45,13 @@
 	
 	```
 	$ gcloud container clusters update CLUSTER_NAME \
-	    --zone=COMPUTE_ZONE \
-	    --workload-pool=PROJECT_ID.svc.id.goog
+		--zone=COMPUTE_ZONE \
+		--workload-pool=PROJECT_ID.svc.id.goog
 	```
 
 	```
 	$ gcloud container node-pools update default-pool \
-    	--cluster=CLUSTER_NAME \
+		--cluster=CLUSTER_NAME \
     	--workload-metadata=GKE_METADATA
 	```
 
@@ -62,34 +62,35 @@
 
 Before we can start deploying honeypots, we must bind the service account used by the cluster to a service account for GCP. Once these accounts are bound to each other, we will be able to deploy honeypots.
 
+Before we can deploy honeypots, we must allocate service accounts for our cluster. This will allow processes like FluentD and our management console act on other resources within our cluster. We will be creating two for the aforementioned processes.
+
+
 1. Navigate to service accounts in IAM and create service account.
 
 2. Fill out service account values as desired.
 
-3. Assign the service account the Kubernetes Engine Admin role with no condition.
+3. For FluentD, grant a role of `Kubernetes Engine Cluster Viewer`. For the management console, grant a role of `Kubernetes Engine Admin`.
 
-4. Grant administrators access to this account as needed.
+4. Grant administrators access to these accounts as needed.
 
-	Resulting values:
-	- GCP_SVC_ACCT_NAME
-	- GCP_SVC_ACCT_EMAIL
+    Resulting values:
+	- MANAGEMENT_SVC_ACCT_EMAIL
+	- FLUENTD_SVC_ACCT_EMAIL
 
-
-We will now need to configure our `values.yaml` so that it has all of the correct values for deployment. CONTINUE HERE
-
-Installing the management environment is now very simple. Once you have configured your values for deployment (a sample is given [here](./values.yaml.sample)), choose an installment name and run the following:
-
-	`$ helm install HELM_INSTALL_NAME .`
-
-We will now bind the GCP service account to the Kubernetes service account.
+We will now bind the GCP service accounts to the Kubernetes service accounts.
 	
 	```
-	gcloud iam service-accounts add-iam-policy-binding GCP_SVC_ACCT_EMAIL \
+	gcloud iam service-accounts add-iam-policy-binding {MANAGEMENT|FLUENTD}_SVC_ACCT_EMAIL \
     --role roles/iam.workloadIdentityUser \
     --member "serviceAccount:PROJECT_ID.svc.id.goog[managment/webserver]"
 	```
 
-Our webserver is now able to deploy honeypots to the network!
+We will now need to configure our `values.yaml` so that it has all of the correct values for deployment (sample [here](./values.yaml.sample)). All provided values are appropriate, however, we are missing one: `webserverGcpSvcAccount`. Set this to `MANAGEMENT_SVC_ACCT_EMAIL`.
 
+Installing the management environment is now very simple. Ensure that you have navigated to the [helm/](.) directory and execute:
 
-This will deploy the honeypot management network. Use the commands provided after execution to locate the external address where services can be accessed.
+	`$ helm install HELM_INSTALL_NAME .`
+
+Our webserver is now able to deploy honeypots to Kubernetes!
+
+The commands provided by the output of this command will direct you to where you can access the management interface.
