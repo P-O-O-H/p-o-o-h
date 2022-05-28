@@ -20,7 +20,7 @@ kibanaImage: docker.elastic.co/kibana/kibana:7.17.4@sha256:ddd263a6fa663e514fcfa
 
 
 # webserverImage specifies the image to use for the honeypot webserver
-webserverImage:
+webserverImage: taylozac/capstone:webserver
 
 # webserverGcpSvcAcct specifies the GCP service account that is to be bound to the service account used by the webserver
 webserverGcpSvcAcct:
