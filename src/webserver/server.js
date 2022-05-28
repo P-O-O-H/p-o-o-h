@@ -44,7 +44,7 @@ app.post('/addpot',urlencodedParser , function (req, res) {
   HONEYPOT_NAME = response.hostname;
   HONEYPOT_PORT = response.port;
   HONEYPOT_IMAGE = response.img;
-  fileName = "yamls/" + HONEYPOT_NAME + ".yaml";
+  fileName = "/var/pots/" + HONEYPOT_NAME + ".yaml";
   content = `---
 # HONEYPOT_NAME service definition.
 apiVersion: v1
@@ -120,7 +120,7 @@ app.post('/delpot',urlencodedParser , function (req, res) {
     hostname: req.body.pot_host_delete_input
   }
 
-  fileName = "yamls/" + response.hostname + ".yaml";
+  fileName = "/var/pots/" + response.hostname + ".yaml";
 
   var data = fs.readFileSync('potData.json');
   var json = JSON.parse(data);
