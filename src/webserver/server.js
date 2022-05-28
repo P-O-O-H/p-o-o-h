@@ -11,7 +11,6 @@ var express = require('express');
 const fs = require('fs');
 var expresshandle = require('express-handlebars');
 var potData = require('./potData');
-var logData = require('./logData');
 
 
 var modal = true;
@@ -153,9 +152,7 @@ app.post('/delpot',urlencodedParser , function (req, res) {
 app.get('/pot', function (req, res) {
   res.status(200).render('potPage',{allPots: potData,boolean:modal});
 });
-app.get('/log', function (req, res) {
-  res.status(200).render('logPage',{allLogs: logData});
-});
+
 
 
 app.get('*', function (req, res) {
