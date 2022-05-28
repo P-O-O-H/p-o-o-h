@@ -10,7 +10,7 @@ metadata:
 spec:
   selector:
     app: elasticsearch
-  clusterIP: 10.8.1.1
+  #clusterIP: 10.8.1.1
   ports:
     - port: 9200
       name: rest
@@ -22,7 +22,7 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: es-cluster
+  name: elasticsearch
   namespace: {{ .Values.managementNamespace }}
 spec:
   serviceName: elasticsearch
@@ -61,9 +61,9 @@ spec:
             fieldRef:
               fieldPath: metadata.name
         - name: discovery.seed_hosts
-          value: "{{- range $i, $e := until (.Values.elasticsearchNodeCount | int) }}es-cluster-{{ $i }}.elasticsearch,{{ end }}"
+          value: "{{- range $i, $e := until (.Values.elasticsearchNodeCount | int) }}elasticsearch-{{ $i }}.elasticsearch.management.svc.cluster.local,{{ end }}"
         - name: cluster.initial_master_nodes
-          value: "{{- range $i, $e := until (.Values.elasticsearchNodeCount | int) }}es-cluster-{{ $i }},{{ end }}"
+          value: "{{- range $i, $e := until (.Values.elasticsearchNodeCount | int) }}elasticsearch-{{ $i }},{{ end }}"
         - name: ES_JAVA_OPTS
           value: "-Xms512m -Xmx512m"
       initContainers:

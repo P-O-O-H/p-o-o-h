@@ -70,7 +70,7 @@ spec:
         image: {{ .Values.fluentdImage }}
         env:
         - name:  FLUENT_ELASTICSEARCH_HOST
-          value: 10.8.1.1
+          value: elasticsearch
         - name:  FLUENT_ELASTICSEARCH_PORT
           value: "9200"
         - name: FLUENT_ELASTICSEARCH_SCHEME
