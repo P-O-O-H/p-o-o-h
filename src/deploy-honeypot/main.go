@@ -7,8 +7,11 @@ import (
 	"io"
 	"io/ioutil"
 	"log"
+	"strings"
+	"os"
 
 	"k8s.io/apimachinery/pkg/api/meta"
+	"k8s.io/apimachinery/pkg/runtime/schema"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -24,19 +27,40 @@ import (
 
 var (
 	kubeconfig   string
-	honeypotspec string
+	spec string
+	deployDelete string
 )
 
 func main() {
 
-	flag.StringVar(&honeypotspec, "honeypotspec", "", "")
+	flag.StringVar(&spec, "spec", "", "")
+	flag.StringVar(&deployDelete, "delete", "create", "")
 	flag.Parse()
 
-	honeypotpath := "/var/pots/" + honeypotspec
+	honeypotpath := "/var/pots/" + spec
 
 	config, err := rest.InClusterConfig()
 	if err != nil {
 		panic(err.Error())
+	}
+
+	if deployDelete == "DELETE" {
+		client, err := dynamic.NewForConfig(config)
+		if err != nil {
+			panic(err.Error())
+		}
+
+		deploymentRes := schema.GroupVersionResource{Group: "apps", Version: "v1", Resource: "deployments"}
+		serviceRes := schema.GroupVersionResource{Group: "apps", Version: "v1", Resource: "services"}
+
+		if err := client.Resource(deploymentRes).Namespace("pots").Delete(context.TODO(), strings.Split(spec, ".")[0], metav1.DeleteOptions{}); err != nil {
+			panic(err)
+		}
+		if err := client.Resource(serviceRes).Namespace("pots").Delete(context.TODO(), strings.Split(spec, ".")[0], metav1.DeleteOptions{}); err != nil {
+			panic(err)
+		}
+
+		os.Exit(0)
 	}
 
 	c, err := kubernetes.NewForConfig(config)
@@ -67,7 +91,7 @@ func main() {
 		if err != nil {
 			panic(err.Error())
 		}
-
+var dri dynamic.ResourceInterface
 		unstructuredObj := &unstructured.Unstructured{Object: unstructuredMap}
 
 		gr, err := restmapper.GetAPIGroupResources(c.Discovery())
@@ -81,7 +105,6 @@ func main() {
 			panic(err.Error())
 		}
 
-		var dri dynamic.ResourceInterface
 		if mapping.Scope.Name() == meta.RESTScopeNameNamespace {
 			if unstructuredObj.GetNamespace() == "" {
 				unstructuredObj.SetNamespace("default")
@@ -90,10 +113,11 @@ func main() {
 		} else {
 			dri = clientset.Resource(mapping.Resource)
 		}
-
+		
 		if _, err := dri.Create(context.Background(), unstructuredObj, metav1.CreateOptions{}); err != nil {
 			panic(err.Error())
 		}
+
 	}
 	if err != io.EOF {
 		log.Fatal("eof ", err)
