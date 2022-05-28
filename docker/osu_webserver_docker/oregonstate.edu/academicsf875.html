@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  
+<!-- Mirrored from oregonstate.edu/academics?title=&page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Jan 2022 23:38:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-336c698735c8772a96d",applicationID:"926440976"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https:///")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://oregonstate.edu/academics" />
+<link rel="shortlink" href="https://oregonstate.edu/academics" />
+<meta name="description" content="Oregon State offers more than 200 undergraduate and 100 graduate degree programs through its 11 colleges, the Graduate School and the Honors College." />
+<meta property="og:site_name" content="Oregon State University" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oregonstate.edu/academics" />
+<meta property="og:title" content="Academics | Oregon State University" />
+<meta property="og:description" content="Oregon State offers more than 200 undergraduate and 100 graduate degree programs through its 11 colleges, the Graduate School and the Honors College." />
+<meta property="og:image" content="https://oregonstate.edu/sites/default/files/2021-03/default-meta-image-1200x630.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="aerial view of Oregon State University Corvallis campus in the fall with brightly colored trees and brick buildings" />
+<meta name="google-site-verification" content="EzfIeVj5D_Jkpdgh4JjLnaS6DFi762P2ijQnLgcU6t4" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@oregonstate" />
+<meta name="twitter:description" content="Oregon State offers more than 200 undergraduate and 100 graduate degree programs through its 11 colleges, the Graduate School and the Honors College." />
+<meta name="twitter:title" content="Academics | Oregon State University" />
+<meta name="twitter:url" content="https://oregonstate.edu/academics" />
+<meta name="twitter:image:height" content="630" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image" content="https://oregonstate.edu/sites/default/files/2021-03/default-meta-image-1200x630.jpg" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+<link rel="icon" href="https://oregonstate.edu/themes/osu/homepage/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="https://oregonstate.edu/sites/default/files/google_tag/main_osu_container/google_tag.script.js?r5ptmm" defer></script>
+
+    <title>Academics | Oregon State University</title>
+    <link rel="stylesheet" media="all" href="https://oregonstate.edu/sites/default/files/css/css_kcpJl2G6pY5K3VUDCOc-bNWZUn5aisTSW0wP2rqcOn8.css" />
+<link rel="stylesheet" media="all" href="https://oregonstate.edu/sites/default/files/css/css_fneRFpVOGtBvl9_S6sS3VU-gzgcp87fyyedvfXWd0iQ.css" />
+<link rel="stylesheet" media="all" href="http://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/style-cf.css" />
+<link rel="stylesheet" media="all" href="https://oregonstate.edu/sites/default/files/css/css_czcHFJH2l1cfsKUNr3lc2DDReeaei3_v0iDS4PQ-Fiw.css" />
+
+    
+  </head>
+  <body>
+  <!-- Monsido Site Script -->
+  <script type="text/javascript">
+    window._monsido = window._monsido || {
+      token: "7BqhRyYP9fteuxY3jfLurQ",
+      statistics: {
+        enabled: true,
+        documentTracking: {
+          enabled: false,
+          documentCls: "monsido_download",
+          documentIgnoreCls: "monsido_ignore_download",
+          documentExt: ["pdf","doc","ppt","docx","pptx"],
+        },
+      },
+    };
+  </script>
+  <script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
+  <!-- End Monsido Site Script -->
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54WQT99" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<header role="banner" class="osu-top-hat">
+        
+
+    
+            <a href="https://oregonstate.edu/" title="Home" rel="home" class="logo">
+            <img src="https://oregonstate.edu/themes/osu/homepage/logo.svg" alt="Oregon State University"/>
+        </a>
+    <nav role="navigation"
+     aria-labelledby="block-homepage-main-menu-menu" id="block-homepage-main-menu" data-block-plugin-id="system_menu_block:main" class="d-none d-lg-block">
+                        
+    <h2 class="visually-hidden" id="block-homepage-main-menu-menu">Front Page - Main navigation</h2>
+    
+
+                
+
+        <ul class="main-menu nav nav-pills">
+                        <li class="nav-item">
+                <a href="https://oregonstate.edu/about" class="nav-link" data-drupal-link-system-path="node/46">About</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="https://oregonstate.edu/academics" class="nav-link" data-drupal-link-system-path="academics">Academics</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="https://oregonstate.edu/osuresearch" class="nav-link" data-drupal-link-system-path="node/61">Research</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="https://outreach.oregonstate.edu/" class="nav-link">Extension &amp; Engagement</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="http://www.osubeavers.com/" class="nav-link">Athletics</a>
+                            </li>
+            </ul>
+        
+    <nav class="d-block d-sm-none mobile-menu-main">
+              <ul>
+              <li>
+        <a href="https://oregonstate.edu/future" data-drupal-link-system-path="node/26">Future Students</a>
+              </li>
+          <li>
+        <a href="https://oregonstate.edu/current" data-drupal-link-system-path="node/11">Current Students</a>
+              </li>
+          <li>
+        <a href="http://ecampus.oregonstate.edu/">Online Students</a>
+              </li>
+          <li>
+        <a href="https://oregonstate.edu/faculty" data-drupal-link-system-path="node/36">Faculty and Staff</a>
+              </li>
+          <li>
+        <a href="https://www.fororegonstate.org/">Alumni and Donors</a>
+              </li>
+        </ul>
+  
+
+</nav>
+
+    </nav>
+
+    <div class="icon-wrapper">
+        <a class="toggle-mobile-menu d-lg-none" href="#">
+            <i class="sr-only sr-only-focusable">Open Menu</i>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <a class="toggle-search" href="https://search.oregonstate.edu/">
+            <i class="sr-only sr-only-focusable">Open Search</i>
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+    </div>
+
+</header>
+
+<div>
+
+    <div id="search">
+        <form action="https://search.oregonstate.edu/" class="searchform" method="get">
+            <label for="search-input" class="sr-only">search for people and pages</label>
+            <input type="text" value="" maxlength="255" size="26" id="search-input" name="q" class="searchbox"
+                   placeholder="Search OSU">
+            <button onclick="ga('send', 'event', 'header', 'Execute Search Button');" type="submit">
+                <span class="sr-only">Search OSU</span><i class="fa fa-search"></i>
+            </button>
+
+            <input type="hidden" value="default_frontend" name="close">
+            <p>Looking for a person? <a onclick="ga('send', 'event', 'header', 'Search Directory');"
+                                        href="http://directory.oregonstate.edu/?type=advanced">Try the campus
+                    directory</a>.</p>
+            <button onclick="ga('send', 'event', 'header', 'Exit Search');" class="close-search" type="button">Exit
+                Search
+            </button>
+        </form>
+    </div>
+
+
+    
+
+    
+
+            
+    
+    <main role="main" class="row no-gutters">
+        <a id="main-content" tabindex="-1"></a>                                    <div class="layout-content col-sm-8 col-md-8 col-lg-9 col-xs-12">
+            
+                            
+            
+            
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-homepage-content" data-block-plugin-id="system_main_block">
+  
+    
+      <div class="views-element-container"><div class="js-view-dom-id-a8b135673ef8ffcfcd067a8d160acc6c68b4702770a597ee0aa96c675b76676a">
+  
+  
+  
+
+      <header>
+      <div id="text">
+    <h2>Your Path Starts Here</span></h3>
+        <p>You might have known what you wanted to do from an early age or maybe you are
+            still
+            trying to figure that out. Either way at Oregon State, we have a place for you.</p>
+
+        <p>Oregon State University’s outstanding faculty and academic programs consistently
+            attract more high achieving students than any other school in Oregon. Oregon State offers more than 200
+            undergraduate and 100 graduate degree programs through its 11 colleges, the <a
+                href="https://gradschool.oregonstate.edu/">Graduate School</a> and the <a
+                href="http://honors.oregonstate.edu/">Honors College</a>, one of only a handful of degree-granting
+            honors programs in the U.S.</p>
+</div>
+<div id="filterHeader">
+    <h3>Undergraduate Programs</h3>
+    <button id="filterexpand">Filter Programs</button>
+</div>
+
+    </header>
+  
+  <form class="views-exposed-form" data-drupal-selector="views-exposed-form-academic-programs-page-1" action="https://oregonstate.edu/academics" method="get" id="views-exposed-form-academic-programs-page-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-title js-form-item-title">
+      <label for="edit-title">Search by Program Name</label>
+        <input data-drupal-selector="edit-title" type="text" id="edit-title" name="title" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div class="js-form-item form-item js-form-type-select form-item-college js-form-item-college">
+      <label for="edit-college">Academic College</label>
+        <select data-drupal-selector="edit-college" multiple="multiple" name="college[]" id="edit-college" size="9" class="form-select"><option value="6">Agricultural Sciences</option><option value="11">Business</option><option value="16">Earth, Ocean and Atmospheric Sciences</option><option value="21">Education</option><option value="26">Engineering</option><option value="1">Forestry</option><option value="31">Liberal Arts</option><option value="36">Pharmacy</option><option value="41">Public Health and Human Sciences</option><option value="46">Science</option><option value="51">Veterinary Medicine</option></select>
+        </div>
+<div class="js-form-item form-item js-form-type-select form-item-location js-form-item-location">
+      <label for="edit-location">Location</label>
+        <select data-drupal-selector="edit-location" multiple="multiple" name="location[]" id="edit-location" size="4" class="form-select"><option value="66">Corvallis</option><option value="71">Ecampus</option><option value="81">OSU-Cascades</option><option value="76">Portland</option></select>
+        </div>
+<div class="js-form-item form-item js-form-type-select form-item-theme js-form-item-theme">
+      <label for="edit-theme">Theme</label>
+        <select data-drupal-selector="edit-theme" multiple="multiple" name="theme[]" id="edit-theme" size="7" class="form-select"><option value="86">Art &amp; Social Sciences</option><option value="91">Business &amp; Related Programs</option><option value="96">Engineering, Computer, &amp; Information Systems</option><option value="101">Health and Wellness</option><option value="106">Ocean &amp; Coasts</option><option value="111">Science &amp; Natural Resources</option><option value="116">Teacher Education</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-academic-programs" type="submit" id="edit-submit-academic-programs" value="Apply Filter" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-reset" type="submit" id="edit-reset" name="op" value="Reset" class="button js-form-submit form-submit" />
+</div>
+
+
+</form>
+
+  
+
+  <div data-drupal-views-infinite-scroll-content-wrapper class="views-infinite-scroll-content-wrapper clearfix"><div class="grid-layout">
+  
+  <ul>
+
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/10_bioengineering_1400x700.jpg?itok=4TPWtFMT" width="300" height="200" alt="Theresa Filtz and Chrissa Kioussi in Pharmacy Lab" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/bioengineering" hreflang="en">Bioengineering</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/11_biohealth-sciences_1400x700.jpg?itok=VYsK7rfA" width="300" height="200" alt="Research sample studied by OSU Student" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/biohealth-sciences" hreflang="en">BioHealth Sciences</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/11-5_biological-data-sciences-globalisation-1400x700.jpg?itok=Hl-_VSDw" width="300" height="200" alt="matrix diagram of globe" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/biological-data-sciences" hreflang="en">Biological Data Sciences</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/12_biology_1400x700.jpg?itok=FESKRmte" width="300" height="200" alt="Biology student in research lab" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/biology" hreflang="en">Biology</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/13_bioresource-research_1400x700.jpg?itok=dCcuZhAK" width="300" height="200" alt="student in research lab" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/bioresource-research" hreflang="en">Bioresource Research</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/14_botony_1400x700.jpg?itok=5YgKVpKO" width="300" height="200" alt="Botany students in greenhouse" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/botany" hreflang="en">Botany</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/15_business-administration_1400x700.jpg?itok=9Ibe8sUU" width="300" height="200" alt="Faculty and students in classroom" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/business-administration" hreflang="en">Business Administration</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/15-5_business-analytics-1400x700.jpg?itok=LkwSGqk_" width="300" height="200" alt="man with graphics shart on computer screen" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/business-analytics" hreflang="en">Business Analytics</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/16_business-information-systems_1400x700.jpg?itok=jTV5oEOV" width="300" height="200" alt="Students in Business Information Systems class" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/business-information-systems" hreflang="en">Business Information Systems</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/17_chemical-engineering_1400x700.jpg?itok=qiAGUmPw" width="300" height="200" alt="In Chemical Engineering lab" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/chemical-engineering" hreflang="en">Chemical Engineering</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/18_chemistry_1400x700.jpg?itok=CeCKTc2D" width="300" height="200" alt="Chemistry students in lab" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/chemistry" hreflang="en">Chemistry</a></span></div></li>
+          <li class="item"><div class="views-field views-field-field-program-image"><div class="field-content">  <img src="https://oregonstate.edu/sites/default/files/styles/300x200_scale_crop/public/19_civil-engineering_1400x700.jpg?itok=ZRh_l7fk" width="300" height="200" alt="Students with surveying equipment" loading="lazy" typeof="foaf:Image" />
+
+
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://oregonstate.edu/academic-programs/civil-engineering" hreflang="en">Civil Engineering</a></span></div></li>
+    
+  </ul>
+
+</div>
+</div>
+
+    
+<ul class="js-pager__items pager" data-drupal-views-infinite-scroll-pager>
+  <li class="pager__item">
+    <a class="button" href="https://oregonstate.edu/academics?title=&amp;page=2" title="Load more items" rel="next">Load More</a>
+  </li>
+</ul>
+
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+
+
+                    </div>
+                    <aside class="layout-sidebar-first col-lg-3 col-md-4 col-sm-4 col-xs-12" role="complementary">
+                
+                  <div>
+    <div id="block-homepage-page-title" data-block-plugin-id="page_title_block">
+  
+    
+      
+  <h1>Academics</h1>
+
+
+  </div>
+<nav role="navigation" aria-labelledby="block-academicprograms-menu" id="block-academicprograms" data-block-plugin-id="system_menu_block:academic-programs">
+            
+    <h2 id="block-academicprograms-menu">Colleges</h2>
+    
+
+                
+              <ul>
+              <li>
+        <a href="http://agsci.oregonstate.edu/">Agricultural Sciences</a>
+              </li>
+          <li>
+        <a href="http://business.oregonstate.edu/">Business</a>
+              </li>
+          <li>
+        <a href="http://ceoas.oregonstate.edu/">Earth, Ocean, and Atmospheric Sciences</a>
+              </li>
+          <li>
+        <a href="http://education.oregonstate.edu/">Education</a>
+              </li>
+          <li>
+        <a href="http://engineering.oregonstate.edu/">Engineering</a>
+              </li>
+          <li>
+        <a href="http://www.forestry.oregonstate.edu/">Forestry</a>
+              </li>
+          <li>
+        <a href="http://liberalarts.oregonstate.edu/">Liberal Arts</a>
+              </li>
+          <li>
+        <a href="http://pharmacy.oregonstate.edu/">Pharmacy</a>
+              </li>
+          <li>
+        <a href="http://health.oregonstate.edu/">Public Health and Human Sciences</a>
+              </li>
+          <li>
+        <a href="http://www.science.oregonstate.edu/">Science</a>
+              </li>
+          <li>
+        <a href="http://vetmed.oregonstate.edu/">Veterinary Medicine</a>
+              </li>
+        </ul>
+  
+
+
+    </nav>
+<nav role="navigation" aria-labelledby="block-academics-menu" id="block-academics" data-block-plugin-id="system_menu_block:academics">
+                        
+    <h2 class="visually-hidden" id="block-academics-menu">Academic Units</h2>
+    
+
+                
+              <ul>
+              <li>
+        <a href="http://gradschool.oregonstate.edu/">Graduate School</a>
+              </li>
+          <li>
+        <a href="http://honors.oregonstate.edu/">Honors College</a>
+              </li>
+          <li>
+        <a href="http://intoosu.oregonstate.edu/">INTO OSU</a>
+              </li>
+          <li>
+        <a href="http://ecampus.oregonstate.edu/">Online Education</a>
+              </li>
+          <li>
+        <a href="https://pace.oregonstate.edu/">Professional and Continuing Education</a>
+              </li>
+          <li>
+        <a href="https://uesp.oregonstate.edu/">University Exploratory Studies</a>
+              </li>
+        </ul>
+  
+
+
+    </nav>
+
+  </div>
+
+            </aside>
+            </main>
+</div>
+
+<footer role="contentinfo" class="no-gutters">
+                    <div class="row no-gutters">
+                            </div>
+    
+</footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"academics","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"page":"1","title":""}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"asset_injector\/css\/academic_programs_view,asset_injector\/css\/alerts_and_updates_css,asset_injector\/css\/custom_style,asset_injector\/css\/sitewide_main_menu,asset_injector\/css\/sitewide_paragraph_updates,asset_injector\/js\/academic_programs,homepage\/bootstrap,homepage\/osu,homepage\/osu-icons,homepage\/webfont-loader,system\/base,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"homepage","theme_token":null},"ajaxTrustedUrl":{"\/academics":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:a8b135673ef8ffcfcd067a8d160acc6c68b4702770a597ee0aa96c675b76676a":{"view_name":"academic_programs","view_display_id":"page_1","view_args":"","view_path":"\/academics","view_base_path":"academics","view_dom_id":"a8b135673ef8ffcfcd067a8d160acc6c68b4702770a597ee0aa96c675b76676a","pager_element":0}}},"ajax":[],"user":{"uid":0,"permissionsHash":"8b9f3bd3b622ccbf254e926e82285a09e77c5c1494bc362820a7f893dde784d2"}}</script>
+<script src="https://oregonstate.edu/sites/default/files/js/js__GYPdTCdIxcpI7m1nMqBWZIvh0t-NgtNBpoLUlh4GSM.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="https://oregonstate.edu/sites/default/files/js/js_ArsLPvjzA--tX2oK7cB4MJVJEDm8p9Tv6fEvwCjJtJE.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-336c698735c8772a96d","applicationID":"926440976","transactionName":"YQcDMBNYVhEDBkwMV1hNIAcVUFcMTSFKEEhXDj0SCFxPET43VxBMXwwGODdQXRUyBF8Ae1kMFRYOVVQHEEgGDVlYBg0B","queueTime":0,"applicationTime":1024,"atts":"TUAARltCRR8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from oregonstate.edu/academics?title=&page=1 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Jan 2022 23:38:13 GMT -->
+</html>

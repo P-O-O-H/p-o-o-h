@@ -1,0 +1,856 @@
+@font-face {
+  font-family: 'osu-icon-webfont';
+  src:  url('https://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/osu-icon-webfont.eot?g5nc6k');
+  src:  url('https://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/osu-icon-webfont.eot?g5nc6k#iefix') format('embedded-opentype'),
+    url('https://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/osu-icon-webfont.woff2?g5nc6k') format('woff2'),
+    url('https://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/osu-icon-webfont.ttf?g5nc6k') format('truetype'),
+    url('https://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/osu-icon-webfont.woff?g5nc6k') format('woff'),
+    url('https://d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/osu-icon-webfont.svg?g5nc6k#osu-icon-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-osu-"], [class*=" icon-osu-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'osu-icon-webfont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-osu-type-settings:before {
+  content: "\ea0d";
+}
+.icon-osu-type-image:before {
+  content: "\ea0f";
+}
+.icon-osu-osu-logo:before {
+  content: "\ea10";
+}
+.icon-osu-illustrations:before {
+  content: "\ea12";
+}
+.icon-osu-graphic-elements:before {
+  content: "\ea13";
+}
+.icon-osu-pill-bottle:before {
+  content: "\e9f5";
+}
+.icon-osu-paint-can:before {
+  content: "\e9f7";
+}
+.icon-osu-cloud-download:before {
+  content: "\e9ec";
+}
+.icon-osu-desk-lamp:before {
+  content: "\e9ed";
+}
+.icon-osu-folder:before {
+  content: "\e9ee";
+}
+.icon-osu-folder-medical:before {
+  content: "\e9ef";
+}
+.icon-osu-golfball:before {
+  content: "\e9f0";
+}
+.icon-osu-golfcart:before {
+  content: "\e9f1";
+}
+.icon-osu-hourglass:before {
+  content: "\e9f2";
+}
+.icon-osu-marijuana-leaf:before {
+  content: "\e9f3";
+}
+.icon-osu-mortar-pestle:before {
+  content: "\e9f4";
+}
+.icon-osu-pawn:before {
+  content: "\e9f6";
+}
+.icon-osu-pizza:before {
+  content: "\e9f8";
+}
+.icon-osu-radiation:before {
+  content: "\e9f9";
+}
+.icon-osu-robot-1:before {
+  content: "\e9fa";
+}
+.icon-osu-robot-2:before {
+  content: "\e9fb";
+}
+.icon-osu-robot-dog:before {
+  content: "\e9fc";
+}
+.icon-osu-robot-hand:before {
+  content: "\e9fd";
+}
+.icon-osu-robotic-arm:before {
+  content: "\e9fe";
+}
+.icon-osu-thermometer:before {
+  content: "\e9ff";
+}
+.icon-osu-tic-tac-toe:before {
+  content: "\ea00";
+}
+.icon-osu-clipboard-alt:before {
+  content: "\ea01";
+}
+.icon-osu-clapboard:before {
+  content: "\ea02";
+}
+.icon-osu-chip:before {
+  content: "\ea03";
+}
+.icon-osu-books-alt:before {
+  content: "\ea04";
+}
+.icon-osu-book:before {
+  content: "\ea05";
+}
+.icon-osu-chainsaw:before {
+  content: "\ea06";
+}
+.icon-osu-caterpillar:before {
+  content: "\ea07";
+}
+.icon-osu-bitcoin:before {
+  content: "\ea08";
+}
+.icon-osu-binoculars:before {
+  content: "\ea09";
+}
+.icon-osu-beakers:before {
+  content: "\ea0a";
+}
+.icon-osu-battery-powered:before {
+  content: "\ea0b";
+}
+.icon-osu-backpack:before {
+  content: "\ea0c";
+}
+.icon-osu-rocket:before {
+  content: "\e9eb";
+}
+.icon-osu-baseball:before {
+  content: "\e9de";
+}
+.icon-osu-social-justice-fist:before {
+  content: "\e9df";
+}
+.icon-osu-peace-symbol:before {
+  content: "\e9e0";
+}
+.icon-osu-peace-hand:before {
+  content: "\e9e1";
+}
+.icon-osu-dove:before {
+  content: "\e9e2";
+}
+.icon-osu-basketball:before {
+  content: "\e9e3";
+}
+.icon-osu-flame:before {
+  content: "\e9e4";
+}
+.icon-osu-battery:before {
+  content: "\e9e5";
+}
+.icon-osu-scantron:before {
+  content: "\e9e6";
+}
+.icon-osu-saturn:before {
+  content: "\e9e7";
+}
+.icon-osu-zoom_meeting:before {
+  content: "\e9e8";
+}
+.icon-osu-water-bottle:before {
+  content: "\e9e9";
+}
+.icon-osu-water-bottle-plastic:before {
+  content: "\e9ea";
+}
+.icon-osu-toilet-paper:before {
+  content: "\e9c7";
+}
+.icon-osu-flatten-the-curve:before {
+  content: "\e9c8";
+}
+.icon-osu-social-distancing:before {
+  content: "\e9c9";
+}
+.icon-osu-anchor:before {
+  content: "\e9ca";
+}
+.icon-osu-sharing:before {
+  content: "\e9cb";
+}
+.icon-osu-director:before {
+  content: "\e9cc";
+}
+.icon-osu-pyramid:before {
+  content: "\e9cd";
+}
+.icon-osu-hand-circle:before {
+  content: "\e9ce";
+}
+.icon-osu-couch:before {
+  content: "\e9cf";
+}
+.icon-osu-community:before {
+  content: "\e9d0";
+}
+.icon-osu-emotions:before {
+  content: "\e9d1";
+}
+.icon-osu-heartbeat:before {
+  content: "\e9d2";
+}
+.icon-osu-wine:before {
+  content: "\e9d3";
+}
+.icon-osu-phone:before {
+  content: "\e9d4";
+}
+.icon-osu-video-player:before {
+  content: "\e9d5";
+}
+.icon-osu-simulation:before {
+  content: "\e9d6";
+}
+.icon-osu-butterfly:before {
+  content: "\e9d7";
+}
+.icon-osu-vr-headset:before {
+  content: "\e9d8";
+}
+.icon-osu-turkey:before {
+  content: "\e9d9";
+}
+.icon-osu-face-covering:before {
+  content: "\e9da";
+}
+.icon-osu-n95-mask:before {
+  content: "\e9dd";
+}
+.icon-osu-tissue:before {
+  content: "\e9dc";
+}
+.icon-osu-handclean:before {
+  content: "\ea0e";
+}
+.icon-osu-wash-hands:before {
+  content: "\e9c5";
+}
+.icon-osu-dirty-hands:before {
+  content: "\e9c6";
+}
+.icon-osu-covid-virus:before {
+  content: "\e9db";
+}
+.icon-osu-soap-dispenser:before {
+  content: "\ea11";
+}
+.icon-osu-alert:before {
+  content: "\e9b0";
+}
+.icon-osu-tree-alt:before {
+  content: "\e9b1";
+}
+.icon-osu-seedling:before {
+  content: "\e9b2";
+}
+.icon-osu-stethoscope:before {
+  content: "\e9b3";
+}
+.icon-osu-shovel:before {
+  content: "\e9b4";
+}
+.icon-osu-octopus-alt:before {
+  content: "\e9b5";
+}
+.icon-osu-world-asia:before {
+  content: "\e9b6";
+}
+.icon-osu-mirror:before {
+  content: "\e9b7";
+}
+.icon-osu-mouth:before {
+  content: "\e9b8";
+}
+.icon-osu-scales:before {
+  content: "\e9b9";
+}
+.icon-osu-stopwatch:before {
+  content: "\e9ba";
+}
+.icon-osu-salamander:before {
+  content: "\e9bb";
+}
+.icon-osu-bread:before {
+  content: "\e9bc";
+}
+.icon-osu-spatula:before {
+  content: "\e9bd";
+}
+.icon-osu-rattle:before {
+  content: "\e9be";
+}
+.icon-osu-slippers:before {
+  content: "\e9bf";
+}
+.icon-osu-pacifier:before {
+  content: "\e9c0";
+}
+.icon-osu-whistle:before {
+  content: "\e9c1";
+}
+.icon-osu-football-statue:before {
+  content: "\e9c2";
+}
+.icon-osu-football:before {
+  content: "\e9c3";
+}
+.icon-osu-bag:before {
+  content: "\e9c4";
+}
+.icon-osu-parking-meter:before {
+  content: "\e9aa";
+}
+.icon-osu-resident-R:before {
+  content: "\e9ad";
+}
+.icon-osu-visitor-badge:before {
+  content: "\e9a9";
+}
+.icon-osu-parking-ticket:before {
+  content: "\e9ab";
+}
+.icon-osu-parking-permit:before {
+  content: "\e9ac";
+}
+.icon-osu-bike-lock:before {
+  content: "\e9ae";
+}
+.icon-osu-flower:before {
+  content: "\e9af";
+}
+.icon-osu-car-2:before {
+  content: "\e9a8";
+}
+.icon-osu-accessibility:before {
+  content: "\e900";
+}
+.icon-osu-american-flag:before {
+  content: "\e901";
+}
+.icon-osu-apple:before {
+  content: "\e902";
+}
+.icon-osu-apple-slice:before {
+  content: "\e903";
+}
+.icon-osu-arrow-down:before {
+  content: "\e904";
+}
+.icon-osu-arrow-left:before {
+  content: "\e905";
+}
+.icon-osu-arrow-right:before {
+  content: "\e906";
+}
+.icon-osu-arrow-up:before {
+  content: "\e907";
+}
+.icon-osu-balloon:before {
+  content: "\e908";
+}
+.icon-osu-barbell:before {
+  content: "\e909";
+}
+.icon-osu-barley:before {
+  content: "\e90a";
+}
+.icon-osu-barn:before {
+  content: "\e90b";
+}
+.icon-osu-beaker:before {
+  content: "\e90c";
+}
+.icon-osu-bee:before {
+  content: "\e90d";
+}
+.icon-osu-beer:before {
+  content: "\e90e";
+}
+.icon-osu-berry:before {
+  content: "\e90f";
+}
+.icon-osu-berry-alt:before {
+  content: "\e910";
+}
+.icon-osu-bicycle:before {
+  content: "\e911";
+}
+.icon-osu-bird:before {
+  content: "\e912";
+}
+.icon-osu-bird-sage-grouse:before {
+  content: "\e913";
+}
+.icon-osu-boat:before {
+  content: "\e914";
+}
+.icon-osu-books:before {
+  content: "\e915";
+}
+.icon-osu-bovine:before {
+  content: "\e916";
+}
+.icon-osu-brain:before {
+  content: "\e917";
+}
+.icon-osu-briefcase:before {
+  content: "\e918";
+}
+.icon-osu-broccolli:before {
+  content: "\e919";
+}
+.icon-osu-bus:before {
+  content: "\e91a";
+}
+.icon-osu-calendar:before {
+  content: "\e91b";
+}
+.icon-osu-camera:before {
+  content: "\e91c";
+}
+.icon-osu-car:before {
+  content: "\e91d";
+}
+.icon-osu-carrot:before {
+  content: "\e91e";
+}
+.icon-osu-cat:before {
+  content: "\e91f";
+}
+.icon-osu-cattailplant:before {
+  content: "\e920";
+}
+.icon-osu-cell:before {
+  content: "\e921";
+}
+.icon-osu-cherry:before {
+  content: "\e922";
+}
+.icon-osu-chicken:before {
+  content: "\e923";
+}
+.icon-osu-clarinet:before {
+  content: "\e924";
+}
+.icon-osu-clipboard:before {
+  content: "\e925";
+}
+.icon-osu-clock:before {
+  content: "\e926";
+}
+.icon-osu-cloud:before {
+  content: "\e927";
+}
+.icon-osu-coffee:before {
+  content: "\e928";
+}
+.icon-osu-compass:before {
+  content: "\e929";
+}
+.icon-osu-corn:before {
+  content: "\e92a";
+}
+.icon-osu-courthouse:before {
+  content: "\e92b";
+}
+.icon-osu-crab:before {
+  content: "\e92c";
+}
+.icon-osu-desktop:before {
+  content: "\e92d";
+}
+.icon-osu-desktop-alt:before {
+  content: "\e92e";
+}
+.icon-osu-diploma:before {
+  content: "\e92f";
+}
+.icon-osu-diploma-roll:before {
+  content: "\e930";
+}
+.icon-osu-dna:before {
+  content: "\e931";
+}
+.icon-osu-document:before {
+  content: "\e932";
+}
+.icon-osu-dog:before {
+  content: "\e933";
+}
+.icon-osu-dog-tags:before {
+  content: "\e934";
+}
+.icon-osu-drink:before {
+  content: "\e935";
+}
+.icon-osu-drone:before {
+  content: "\e936";
+}
+.icon-osu-drum:before {
+  content: "\e937";
+}
+.icon-osu-emergency-light:before {
+  content: "\e938";
+}
+.icon-osu-envelope:before {
+  content: "\e939";
+}
+.icon-osu-envelope-open:before {
+  content: "\e93a";
+}
+.icon-osu-fish:before {
+  content: "\e93b";
+}
+.icon-osu-flatware:before {
+  content: "\e93c";
+}
+.icon-osu-gas-pump:before {
+  content: "\e93d";
+}
+.icon-osu-gear:before {
+  content: "\e93e";
+}
+.icon-osu-glasses:before {
+  content: "\e93f";
+}
+.icon-osu-goat:before {
+  content: "\e940";
+}
+.icon-osu-golf:before {
+  content: "\e941";
+}
+.icon-osu-grapes:before {
+  content: "\e942";
+}
+.icon-osu-graph:before {
+  content: "\e943";
+}
+.icon-osu-group:before {
+  content: "\e944";
+}
+.icon-osu-guitar:before {
+  content: "\e945";
+}
+.icon-osu-hamburger-menu:before {
+  content: "\e946";
+}
+.icon-osu-hammer:before {
+  content: "\e947";
+}
+.icon-osu-hand:before {
+  content: "\e948";
+}
+.icon-osu-handshake:before {
+  content: "\e949";
+}
+.icon-osu-hanger:before {
+  content: "\e94a";
+}
+.icon-osu-hat:before {
+  content: "\e94b";
+}
+.icon-osu-heart:before {
+  content: "\e94c";
+}
+.icon-osu-heart-symbol:before {
+  content: "\e94d";
+}
+.icon-osu-horse:before {
+  content: "\e94e";
+}
+.icon-osu-icon-calculator:before {
+  content: "\e94f";
+}
+.icon-osu-image:before {
+  content: "\e950";
+}
+.icon-osu-info:before {
+  content: "\e951";
+}
+.icon-osu-key:before {
+  content: "\e952";
+}
+.icon-osu-laptop:before {
+  content: "\e953";
+}
+.icon-osu-leaf:before {
+  content: "\e954";
+}
+.icon-osu-leaf-alt:before {
+  content: "\e955";
+}
+.icon-osu-lightbulb:before {
+  content: "\e956";
+}
+.icon-osu-lightning:before {
+  content: "\e957";
+}
+.icon-osu-link:before {
+  content: "\e958";
+}
+.icon-osu-llama:before {
+  content: "\e959";
+}
+.icon-osu-lock:before {
+  content: "\e95a";
+}
+.icon-osu-magnifying-glass:before {
+  content: "\e95b";
+}
+.icon-osu-mammoth:before {
+  content: "\e95c";
+}
+.icon-osu-map-marker:before {
+  content: "\e95d";
+}
+.icon-osu-maze:before {
+  content: "\e95e";
+}
+.icon-osu-medal:before {
+  content: "\e95f";
+}
+.icon-osu-megaphone:before {
+  content: "\e960";
+}
+.icon-osu-megaphone-alt:before {
+  content: "\e961";
+}
+.icon-osu-microphone:before {
+  content: "\e962";
+}
+.icon-osu-microscope:before {
+  content: "\e963";
+}
+.icon-osu-molecule:before {
+  content: "\e964";
+}
+.icon-osu-money:before {
+  content: "\e965";
+}
+.icon-osu-moon:before {
+  content: "\e966";
+}
+.icon-osu-mortar-board:before {
+  content: "\e967";
+}
+.icon-osu-motorcycle:before {
+  content: "\e968";
+}
+.icon-osu-mountains:before {
+  content: "\e969";
+}
+.icon-osu-mouse:before {
+  content: "\e96a";
+}
+.icon-osu-mouse-cursor:before {
+  content: "\e96b";
+}
+.icon-osu-mouse-pointer:before {
+  content: "\e96c";
+}
+.icon-osu-mu:before {
+  content: "\e96d";
+}
+.icon-osu-music-notes:before {
+  content: "\e96e";
+}
+.icon-osu-nation:before {
+  content: "\e96f";
+}
+.icon-osu-newspaper:before {
+  content: "\e970";
+}
+.icon-osu-no-smoking:before {
+  content: "\e971";
+}
+.icon-osu-octopus:before {
+  content: "\e972";
+}
+.icon-osu-oregon:before {
+  content: "\e973";
+}
+.icon-osu-palette:before {
+  content: "\e974";
+}
+.icon-osu-paper-clip:before {
+  content: "\e975";
+}
+.icon-osu-pear:before {
+  content: "\e976";
+}
+.icon-osu-pencil:before {
+  content: "\e977";
+}
+.icon-osu-piano:before {
+  content: "\e978";
+}
+.icon-osu-pie:before {
+  content: "\e979";
+}
+.icon-osu-pig:before {
+  content: "\e97a";
+}
+.icon-osu-piggy-bank:before {
+  content: "\e97b";
+}
+.icon-osu-pillar:before {
+  content: "\e97c";
+}
+.icon-osu-pine-tree:before {
+  content: "\e97d";
+}
+.icon-osu-play:before {
+  content: "\e97e";
+}
+.icon-osu-plus:before {
+  content: "\e97f";
+}
+.icon-osu-printer:before {
+  content: "\e980";
+}
+.icon-osu-projector-screen:before {
+  content: "\e981";
+}
+.icon-osu-questionmark:before {
+  content: "\e982";
+}
+.icon-osu-raccoon:before {
+  content: "\e983";
+}
+.icon-osu-rain:before {
+  content: "\e984";
+}
+.icon-osu-recycle:before {
+  content: "\e985";
+}
+.icon-osu-ribbon:before {
+  content: "\e986";
+}
+.icon-osu-robot:before {
+  content: "\e987";
+}
+.icon-osu-ryegrass:before {
+  content: "\e988";
+}
+.icon-osu-sage:before {
+  content: "\e989";
+}
+.icon-osu-satellite:before {
+  content: "\e98a";
+}
+.icon-osu-server:before {
+  content: "\e98b";
+}
+.icon-osu-shield:before {
+  content: "\e98c";
+}
+.icon-osu-shoe:before {
+  content: "\e98d";
+}
+.icon-osu-ski:before {
+  content: "\e98e";
+}
+.icon-osu-skull:before {
+  content: "\e98f";
+}
+.icon-osu-smartphone:before {
+  content: "\e990";
+}
+.icon-osu-smartphone-alt:before {
+  content: "\e991";
+}
+.icon-osu-snowflake:before {
+  content: "\e992";
+}
+.icon-osu-solar-panel:before {
+  content: "\e993";
+}
+.icon-osu-star:before {
+  content: "\e994";
+}
+.icon-osu-sun:before {
+  content: "\e995";
+}
+.icon-osu-tablet:before {
+  content: "\e996";
+}
+.icon-osu-tablet-alt:before {
+  content: "\e997";
+}
+.icon-osu-tent:before {
+  content: "\e998";
+}
+.icon-osu-tomato:before {
+  content: "\e999";
+}
+.icon-osu-tools:before {
+  content: "\e99a";
+}
+.icon-osu-tractor:before {
+  content: "\e99b";
+}
+.icon-osu-trophy:before {
+  content: "\e99c";
+}
+.icon-osu-turbine:before {
+  content: "\e99d";
+}
+.icon-osu-user:before {
+  content: "\e99e";
+}
+.icon-osu-videocamera:before {
+  content: "\e99f";
+}
+.icon-osu-vr:before {
+  content: "\e9a0";
+}
+.icon-osu-water:before {
+  content: "\e9a1";
+}
+.icon-osu-wave:before {
+  content: "\e9a2";
+}
+.icon-osu-waves:before {
+  content: "\e9a3";
+}
+.icon-osu-whale:before {
+  content: "\e9a4";
+}
+.icon-osu-wheelchair:before {
+  content: "\e9a5";
+}
+.icon-osu-world:before {
+  content: "\e9a6";
+}
+.icon-osu-wrench:before {
+  content: "\e9a7";
+}
