@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, section, nav, main {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    background: #333;
+}
+
+a,
+a:visited {
+    text-decoration: underline;
+    color: #d73f09;
+}
+
+a:active, a:focus, a:hover {
+    text-decoration: none;
+}
+
+p, h3 {
+    padding-bottom: 1em;
+}
+
+header {
+    background-color: #d73f09;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+header img {
+    width: 150px;
+    padding: 10px 0 5px 0;
+}
+
+body {
+
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #565656;
+}
+
+main {
+    background: #f5f2ed;
+}
+
+
+form,
+.content {
+    padding: 1em;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.content {
+    padding-bottom: 4em;
+}
+
+.form-element-wrapper {
+    margin-bottom: .8em;
+}
+
+.form-error {
+    background: url(../images/x.png) no-repeat 5px center;
+    margin: 1em 0;
+    border: 1px solid red;
+    padding: 1em 1em 1em 2em;
+}
+
+label {
+    display: block;
+}
+
+input[type=text],
+input[type=password] {
+    padding: .1em .2em;
+    font-size: 2em;
+    border: 1px solid #c0c0c0;
+    width: 96%;
+    height: 1.4em;
+}
+
+button[type=submit] {
+    border: none;
+    background: #d73f09;
+    color: #fff;
+    width: 100%;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    height: 3em;
+}
+
+button[type=submit]:hover,
+button[type=submit]:active,
+button[type=submit]:focus {
+   background: #565656;
+    cursor: pointer;
+}
+
+input:focus {
+    background-color: #fafabe;
+}
+
+footer {
+    border-top: 2px solid #d73f09;
+    color: #fff;
+
+    padding: 1em 1.4em;
+    font-size: 12px;
+}
+
+footer a {
+    color: #fff;
+}
+
+aside {
+    font-size: 12px;
+}
+
+.list-help {
+    float: right;
+}
+
+li {
+    list-style-type: none;
+}
+
+.btn {
+    border: 1px solid #e1e1e1;
+    display: inline-block;
+    padding: .6em .8em;
+    background-color: #f5f2ed;
+}
+
+@media (min-width: 540px) {
+    header img {
+        padding: 5px 0 0 0;
+        width: 200px;
+    }
+    form,
+    .content {
+        max-width: 540px;
+    }
+
+    body {
+        background: #333 url("../treeline.png") repeat-x scroll left bottom;
+    }
+
+    footer
+
+    footer p {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 974px) {
+    main {
+        background: url(../background_sm.jpg) #f5f2ed no-repeat center center /cover;
+        padding: 2em 0;
+    }
+
+    .form-element-wrapper {
+        margin-bottom: 1.5em;
+    }
+
+    label {
+        margin-bottom: .5em;
+    }
+
+    form,
+    .content {
+        padding: 2em 1em 3em;
+    }
+
+}

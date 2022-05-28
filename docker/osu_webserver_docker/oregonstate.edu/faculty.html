@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  
+<!-- Mirrored from oregonstate.edu/faculty by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Jan 2022 23:37:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-336c698735c8772a96d",applicationID:"926440976"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https:///")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="faculty.html" />
+<link rel="shortlink" href="faculty.html" />
+<link rel="image_src" href="sites/default/files/2021-03/default-meta-image-1200x630.jpg" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="Faculty and staff at Oregon State University deliver far-reaching solutions that guarantee the prosperity of our state and world. We transform learners into leaders." />
+<meta property="og:site_name" content="Oregon State University" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oregonstate.edu/faculty" />
+<meta property="og:title" content="Faculty and Staff" />
+<meta property="og:description" content="Faculty and staff at Oregon State University deliver far-reaching solutions that guarantee the prosperity of our state and world. We transform learners into leaders." />
+<meta property="og:image" content="https://oregonstate.edu/sites/default/files/2021-03/default-meta-image-1200x630.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="google-site-verification" content="EzfIeVj5D_Jkpdgh4JjLnaS6DFi762P2ijQnLgcU6t4" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@oregonstate" />
+<meta name="twitter:description" content="Faculty and staff at Oregon State University deliver far-reaching solutions that guarantee the prosperity of our state and world. We transform learners into leaders." />
+<meta name="twitter:title" content="Faculty and Staff" />
+<meta name="twitter:url" content="https://oregonstate.edu/faculty" />
+<meta name="twitter:image:height" content="1200" />
+<meta name="twitter:image:width" content="630" />
+<meta name="twitter:image" content="https://oregonstate.edu/sites/default/files/2021-03/default-meta-image-1200x630.jpg" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+<link rel="icon" href="themes/osu/homepage/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="sites/default/files/google_tag/main_osu_container/google_tag.script16e5.js?r5ptmm" defer></script>
+
+    <title>Faculty and Staff | Oregon State University</title>
+    <link rel="stylesheet" media="all" href="sites/default/files/css/css_CyTtQppJI79PcLrlMkUknLgutZCQFto97y1yKuiypmI.css" />
+<link rel="stylesheet" media="all" href="sites/default/files/css/css_fneRFpVOGtBvl9_S6sS3VU-gzgcp87fyyedvfXWd0iQ.css" />
+<link rel="stylesheet" media="all" href="../d1azc1qln24ryf.cloudfront.net/155267/OregonStateBrandIcons/style-cf.css" />
+<link rel="stylesheet" media="all" href="sites/default/files/css/css_l2TV6GB7935w0uBqG_-LwmjKa77N13vpKlkMcyRr3Vs.css" />
+
+    
+  </head>
+  <body>
+  <!-- Monsido Site Script -->
+  <script type="text/javascript">
+    window._monsido = window._monsido || {
+      token: "7BqhRyYP9fteuxY3jfLurQ",
+      statistics: {
+        enabled: true,
+        documentTracking: {
+          enabled: false,
+          documentCls: "monsido_download",
+          documentIgnoreCls: "monsido_ignore_download",
+          documentExt: ["pdf","doc","ppt","docx","pptx"],
+        },
+      },
+    };
+  </script>
+  <script type="text/javascript" async src="../app-script.monsido.com/v2/monsido-script.js"></script>
+  <!-- End Monsido Site Script -->
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54WQT99" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<header role="banner" class="osu-top-hat">
+        
+
+    
+            <a href="index.html" title="Home" rel="home" class="logo">
+            <img src="themes/osu/homepage/logo.svg" alt="Oregon State University"/>
+        </a>
+    <nav role="navigation"
+     aria-labelledby="block-homepage-main-menu-menu" id="block-homepage-main-menu" data-block-plugin-id="system_menu_block:main" class="d-none d-lg-block">
+                        
+    <h2 class="visually-hidden" id="block-homepage-main-menu-menu">Front Page - Main navigation</h2>
+    
+
+                
+
+        <ul class="main-menu nav nav-pills">
+                        <li class="nav-item">
+                <a href="about.html" class="nav-link" data-drupal-link-system-path="node/46">About</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="academics.html" class="nav-link" data-drupal-link-system-path="academics">Academics</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="osuresearch.html" class="nav-link" data-drupal-link-system-path="node/61">Research</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="https://outreach.oregonstate.edu/" class="nav-link">Extension &amp; Engagement</a>
+                            </li>
+                    <li class="nav-item">
+                <a href="http://www.osubeavers.com/" class="nav-link">Athletics</a>
+                            </li>
+            </ul>
+        
+    <nav class="d-block d-sm-none mobile-menu-main">
+              <ul>
+              <li>
+        <a href="future.html" data-drupal-link-system-path="node/26">Future Students</a>
+              </li>
+          <li>
+        <a href="current.html" data-drupal-link-system-path="node/11">Current Students</a>
+              </li>
+          <li>
+        <a href="http://ecampus.oregonstate.edu/">Online Students</a>
+              </li>
+          <li>
+        <a href="faculty.html" data-drupal-link-system-path="node/36" class="is-active">Faculty and Staff</a>
+              </li>
+          <li>
+        <a href="https://www.fororegonstate.org/">Alumni and Donors</a>
+              </li>
+        </ul>
+  
+
+</nav>
+
+    </nav>
+
+    <div class="icon-wrapper">
+        <a class="toggle-mobile-menu d-lg-none" href="#">
+            <i class="sr-only sr-only-focusable">Open Menu</i>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <a class="toggle-search" href="https://search.oregonstate.edu/">
+            <i class="sr-only sr-only-focusable">Open Search</i>
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+    </div>
+
+</header>
+
+<div>
+
+    <div id="search">
+        <form action="https://search.oregonstate.edu/" class="searchform" method="get">
+            <label for="search-input" class="sr-only">search for people and pages</label>
+            <input type="text" value="" maxlength="255" size="26" id="search-input" name="q" class="searchbox"
+                   placeholder="Search OSU">
+            <button onclick="ga('send', 'event', 'header', 'Execute Search Button');" type="submit">
+                <span class="sr-only">Search OSU</span><i class="fa fa-search"></i>
+            </button>
+
+            <input type="hidden" value="default_frontend" name="close">
+            <p>Looking for a person? <a onclick="ga('send', 'event', 'header', 'Search Directory');"
+                                        href="http://directory.oregonstate.edu/?type=advanced">Try the campus
+                    directory</a>.</p>
+            <button onclick="ga('send', 'event', 'header', 'Exit Search');" class="close-search" type="button">Exit
+                Search
+            </button>
+        </form>
+    </div>
+
+
+    
+
+    
+
+              <div>
+    <nav role="navigation" aria-labelledby="block-facultyandstaff-menu" id="block-facultyandstaff" data-block-plugin-id="system_menu_block:faculty-and-staff">
+                        
+    <h2 class="visually-hidden" id="block-facultyandstaff-menu">Faculty and Staff</h2>
+    
+
+                
+              <ul>
+              <li>
+        <a href="https://my.oregonstate.edu/">MyOregonState</a>
+              </li>
+          <li>
+        <a href="https://hr.oregonstate.edu/">Human Resources</a>
+              </li>
+          <li>
+        <a href="http://directory.oregonstate.edu/">Directory</a>
+              </li>
+          <li>
+        <a href="http://hr.oregonstate.edu/employment-opportunities-osu">Jobs</a>
+              </li>
+          <li>
+        <a href="https://diversity.oregonstate.edu/">Diversity</a>
+              </li>
+        </ul>
+  
+
+
+    </nav>
+
+  </div>
+
+    
+    <main role="main" class="row no-gutters">
+        <a id="main-content" tabindex="-1"></a>                                    <div class="layout-content col-md-12">
+            
+                            
+            
+            
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-homepage-content" data-block-plugin-id="system_main_block">
+  
+    
+      <article role="article" about="/faculty">
+
+  
+    
+
+  
+  <div>
+    
+            <div class="field field--name-field-paragraph field--type-entity-reference-revisions field--label-hidden field__items">
+                            <div class="field__item">    
+<div class="left-text paragraph paragraph--type--paragraph-1-column paragraph--view-mode--default row no-gutters" id="paragraph-id--2461">
+    <div class="col-md-12" style=background-image:url(sites/default/files/paragraphs/hpfaculty-winter-1900x800.jpg)>
+        
+                        <div class="field field--name-field-p-1-col-main field--type-text-long field--label-hidden field__item"><h2>Faculty and Staff</h2>
+
+<p>Faculty and staff at Oregon State University deliver far-reaching solutions that guarantee the prosperity of our state and world. We transform learners into leaders. We are passionate about our work and the people we serve.</p>
+</div>
+            
+    </div>
+</div>
+</div>
+                            <div class="field__item">    <div class="paragraph paragraph--type--full-width-plain paragraph--view-mode--default" id="paragraph-id--1701">
+                    
+                        <div class="field field--name-field-custom-content field--type-text-long field--label-hidden field__item"><style>
+    /*this centers the resources block*/
+    #block-homepage-content+div {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+    /*changes the positioning of the hero photo for mobile so that it's not cut off*/
+    @media (max-width: 545px) {
+        #paragraph-id--2461 .col-md-12 {
+            background-position-x: 35%;
+        }
+
+        #paragraph-id--2461 .field--name-field-p-1-col-main {
+            margin-top: 75%;
+        }
+    }
+</style></div>
+            
+            </div>
+</div>
+                    </div>
+    
+  </div>
+
+</article>
+
+  </div>
+
+
+
+                              <div>
+    <div class="views-element-container" id="block-views-block-resources-block-1" data-block-plugin-id="views_block:resources-block_1">
+  
+    
+      <div><div class="js-view-dom-id-b9e63221ce44116eefdecc5cce4defa495071663c9bd9a26bc437194996a8ada">
+  
+  
+  
+
+  
+  <form class="views-exposed-form" data-drupal-selector="views-exposed-form-resources-block-1" action="https://oregonstate.edu/faculty" method="get" id="views-exposed-form-resources-block-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-combine js-form-item-combine">
+      <label for="edit-combine">Search Resources</label>
+        <input data-drupal-selector="edit-combine" type="text" id="edit-combine" name="combine" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-resources" type="submit" id="edit-submit-resources" value="Apply" class="button js-form-submit form-submit" />
+</div>
+
+
+</form>
+
+  
+
+      <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://oregonstate.teamdynamix.com/TDClient/1935/Portal/KB/ArticleDet?ID=134004%20">Administrative Data Systems</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Request access to Banner, Appworx, or other databases</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://hr.oregonstate.edu/benefits/">Benefits</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Learn about insurance, staff tuition, and retirement options</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://fa.oregonstate.edu/eProcurement">Benny Buy</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Buy supplies and products, or hire a vendor</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://box.oregonstate.edu/">Box</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Data storage and collaboration</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://communications.oregonstate.edu/brand-guide/using-brand/downloads">Brand Downloads</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+Add branding to print and digital materials</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://fa.oregonstate.edu/osu-shared-services/finding-my-business-center">Business Centers</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Get HR, finance and accounting support for your unit</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://fa.oregonstate.edu/recycling">Campus Recycling</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Learn how to prevent waste and recycle on campus</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="http://canvas.oregonstate.edu/">Canvas</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>OSU's learning management platform</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://iar.oregonstate.edu/decision-support/university-reporting">CORE</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Run reports using student, finance, human resources and other types of data</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://training.oregonstate.edu/">Critical Training</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Training for employees, students and volunteers</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="http://directory.oregonstate.edu/">Directory</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Search for contact information of the OSU community</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://is.oregonstate.edu/docusign">Docusign</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Sign a document electronically</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="http://osu.workforcehosting.com/">EmpCenter</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Fill out timesheet and request leave</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://hr.oregonstate.edu/benefits/current-employees/health-wellness-work-life/employee-assistance-program">Employee Assistant Program (EAP)</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Legal, financial, work-life, and mental health and wellness services and resources</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://ehs.oregonstate.edu/">Environmental Health and Safety</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Report a safety concern, request a waste pickup, receive safety training or consultation</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://eoa.oregonstate.edu/request-accommodation">Equal Opportunity and Access</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Request accommodation</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://events.oregonstate.edu/">Events</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Find events that are sponsored by an OSU department</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://my.facilities.oregonstate.edu/facilities/newRequest">Facilities</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Report a maintenance issue</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://health.oregonstate.edu/faculty-staff-fitness">Faculty Staff Fitness</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Take an exercise class on campus</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://beavs.osubeaverstore.com/adoptions/">Faculty Textbook Requisitions</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Order textbooks for an upcoming class</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://facultyaffairs.oregonstate.edu/faculty-union-bargaining">Faculty Union</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Read about the United Academics of OSU (UAOSU) faculty union's bargaining updates</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://familyresources.oregonstate.edu/">Family Resources</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Services to all OSU families with dependent care</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://fa.oregonstate.edu/business-affairs/id-center">ID Center</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Get an OSU ID or replacement</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://research.oregonstate.edu/irb">Institutional Review Board (IRB)</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Protect the rights and welfare of human subjects who participate in research</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://jobs.oregonstate.edu/">Jobs</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Check available job listings</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://my.oregonstate.edu/">MyOregonState</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>A personalized dashboard for students and employees</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://ombuds.oregonstate.edu/">Ombuds</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Resolve work conflict</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://food.oregonstate.edu/orange-cash">Orange Cash</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Load money onto your OSU ID to use at campus eateries</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://library.oregonstate.edu/">OSU Libraries</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Connect to online journals and databases, research guides, and request materials</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://is.oregonstate.edu/service/central-software-distribution">OSU Software</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Download software available to OSU employees</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://today.oregonstate.edu/">OSU Today</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Read about OSU in the news</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://outlook.office.com/">Outlook (Exchange Online)</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Check your work email through a web browser</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://printmail.oregonstate.edu/">Printing and Mailing Services</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Ship a package or print a sign, brochure, etc.</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://facultyaffairs.oregonstate.edu/faculty-handbook/promotion-and-tenure-guidelines">Promotion and Tenure Guidelines</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Criteria and procedures for promotion and tenure</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://hr.oregonstate.edu/jobs">Recruitment and Selection Resources</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Learn how to hire an employee</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://recsports.oregonstate.edu/">RecSports</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Take a climbing class, rent outdoor equipment, hire a personal trainer and much more with RecSports</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://hr.oregonstate.edu/policies-procedures/administrators/classification-compensation/salary-reports">Salary Reports</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Check salaries for unclassified and classified employees</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://searchadvocate.oregonstate.edu/about/osu-search-advocate-directory">Search Advocate Directory</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Find a search advocate for your search committee</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://hr.oregonstate.edu/orientation/benefits-overview/classified-75-fte-10-fte-benefits/seiu-–-classified-employee-union">SEIU 503</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Contact the union for classified employees</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://oregonstate.teamdynamix.com/TDClient/Home/">Service Desk</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Technical support for your computer</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://is.oregonstate.edu/duo">Sign up for Duo</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Sign up for 2 factor authentication</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://fa.oregonstate.edu/surplus/departments-and-agencies/pickup-drop-request">Surplus</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Request pick up of extra office supplies and furniture</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://is.oregonstate.edu/telecom/request-phonenetwork-service-or-repair">Telecomm</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Request phone service or repair</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://registrar.oregonstate.edu/">The Office of the Registrar</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Grading, curriculum changes, scheduling, &amp; degree requirements</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://transportation.oregonstate.edu/">Transportation Services</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Rent a vehicle, ride the Beaver Bus, purchase a parking permit, or get options for biking, walking, transit and carpooling</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://fa.oregonstate.edu/travel-and-expense">Travel</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Book and get reimbursement for work related travel</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://uhds.oregonstate.edu/catering">University Catering</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+<!--td {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}-->
+
+/*--><!]]>*/
+</style>
+Order catering for an event</p>
+</div></div></div>
+    <div class="views-row"><div class="views-field views-field-title"><div class="field-content"><a href="https://is.oregonstate.edu/zoom">Zoom</a></div></div><div class="views-field views-field-field-resource-description"><div class="field-content"><p>Start a virtual meeting</p>
+</div></div></div>
+
+    
+
+  
+  
+
+      <footer>
+      <p>Did we miss something? <a href="http://oregonstate.qualtrics.com/jfe/form/SV_etk6oePZyrwJI7X">Suggest a resource</a>.</p>
+    </footer>
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+                    </div>
+            </main>
+</div>
+
+<footer role="contentinfo" class="no-gutters">
+                    <div class="row no-gutters">
+                    <div class="col-md-12">
+                  <div>
+    <div id="block-contactinformation" data-block-plugin-id="block_content:49cc766b-85df-43c6-b563-bc8566966bcf">
+  
+    
+      
+                        <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><a class="icon" href="https://instagram.com/oregonstate"><span class="sr-only">OSU's Instagram</span><i class="fab fa-instagram" ></i></a>
+<a class="icon" href="https://twitter.com/oregonstate"><span class="sr-only">OSU's Twitter</span><i class="fab fa-twitter" ></i></a>
+<a class="icon" href="https://www.facebook.com/osubeavers"><span class="sr-only">OSU's Facebook</span><i class="fab fa-facebook-f" ></i></a>
+<a class="icon" href="https://www.youtube.com/user/OregonStateUniv"><span class="sr-only">OSU's Youtube</span><i class="fab fa-youtube" ></i></a>
+<a class="icon" style="padding:0px;" href="https://open.spotify.com/user/clcmse6ojy8etzcatn9fvb5m0?si=ufW8IGPoQ3CgyhwQHmWhlQ"><span class="sr-only">Spotify</span><i class="fab fa-spotify"></i></a>
+
+
+<p style="margin-top: 2rem;">Oregon State University<br />
+1500 SW Jefferson Way<br />
+Corvallis, OR 97331<br />
+541-737-1000</p>
+
+<ul>
+	<li><a href="https://map.oregonstate.edu/">Campus Map</a></li>
+	<li><a href="accessibility/index.html" onclick="ga('send', 'event', 'footer', 'Accessibility');">Accessibility Information</a></li>
+	<li><a href="http://fa.oregonstate.edu/publicsafety">Campus Safety</a></li>
+	<li><a href="http://osubeaverstore.com/" onclick="ga('send', 'event', 'footer', 'Beaver Store');">OSU Beaver Store</a></li>
+	<li><a href="http://communications.oregonstate.edu/webform/contact-osu">Contact OSU</a></li>
+</ul>
+
+<p><a href="digital-millennium-copyright-act.html">Copyright</a> ©2022 Oregon State University<br />
+<a href="official-web-disclaimer.html">Privacy Information and Disclaimer</a></p>
+
+<p style="padding-top: 10px;"><a href="https://social.oregonstate.edu/which-beaver-are-you">What kind of beaver are you?</a></p>
+
+<style>
+    .icon {
+        font-size: 25px;
+        padding-right: 20px;
+        transition: all 0.4s ease;
+    }
+
+    .icon:hover, .icon:focus{
+        color: #d73f09;
+    }
+
+   #block-contactinformation {
+       text-align: center;
+   }
+
+   #block-contactinformation ul {
+       padding: 0;
+   }
+   
+   #block-contactinformation li {
+       list-style: none;
+       padding-bottom: 3px;
+   }
+
+</style></div>
+            
+  </div>
+
+  </div>
+
+            </div>
+                            </div>
+    
+</footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/36","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"asset_injector\/css\/alerts_and_updates_css,asset_injector\/css\/custom_style,asset_injector\/css\/faculty_staff_photo,asset_injector\/css\/sitewide_main_menu,asset_injector\/css\/sitewide_paragraph_updates,asset_injector\/css\/submenu_styles,homepage\/bootstrap,homepage\/osu,homepage\/osu-icons,homepage\/webfont-loader,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.ajax,views\/views.module","theme":"homepage","theme_token":null},"ajaxTrustedUrl":{"\/faculty":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:b9e63221ce44116eefdecc5cce4defa495071663c9bd9a26bc437194996a8ada":{"view_name":"resources","view_display_id":"block_1","view_args":"","view_path":"\/node\/36","view_base_path":null,"view_dom_id":"b9e63221ce44116eefdecc5cce4defa495071663c9bd9a26bc437194996a8ada","pager_element":0}}},"ajax":[],"user":{"uid":0,"permissionsHash":"8b9f3bd3b622ccbf254e926e82285a09e77c5c1494bc362820a7f893dde784d2"}}</script>
+<script src="sites/default/files/js/js_7NJoVYIb-_6_vXCOVDtRWhJtQpAfRofgaU3O8IwTPsc.js"></script>
+<script src="../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="sites/default/files/js/js_rxtnvu-6v9mTp-7bT3tV3EcYc8Sj_5e3wLJTPq08pZQ.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-336c698735c8772a96d","applicationID":"926440976","transactionName":"YQcDMBNYVhEDBkwMV1hNIAcVUFcMTSFKEEhXDj0KDl1dPiEKVhFKWQ4NARNldg0GAG4MXUEhDgoVS1cODgBKSAZACwQT","queueTime":0,"applicationTime":1719,"atts":"TUAARltCRR8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from oregonstate.edu/faculty by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Jan 2022 23:37:31 GMT -->
+</html>
